@@ -1,0 +1,56 @@
+{
+    "headers": [
+      {
+        "source": "/Build/:name.data.br",
+        "headers": [
+          {
+            "key": "Content-Encoding",
+            "value": "brotli"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/octet-stream"
+          }
+        ]
+      },
+      {
+        "source": "/Build/:name.wasm.br",
+        "headers": [
+          {
+            "key": "Content-Encoding",
+            "value": "brotli"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/wasm"
+          }
+        ]
+      },
+      {
+        "source": "/Build/:name.js",
+        "headers": [
+          {
+            "key": "Content-Encoding",
+            "value": "js"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/javascript"
+          }
+        ]
+      },
+      {
+        "source": "/Build/:name.js.br",
+        "headers": [
+          {
+            "key": "Content-Encoding",
+            "value": "brotli"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/javascript"
+          }
+        ]
+      }
+    ]
+  }
