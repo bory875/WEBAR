@@ -1,25 +1,17 @@
 {
   "headers": [
     {
-      "source": "/Build/:name.data.gz",
+      "source": "/(.*\\.unityweb)",
       "headers": [
         {
           "key": "Content-Encoding",
           "value": "gzip"
-        },
-        {
-          "key": "Content-Type",
-          "value": "application/octet-stream"
         }
       ]
     },
     {
-      "source": "/Build/:name.wasm.gz",
+      "source": "/(.*\\.wasm\\.unityweb)",
       "headers": [
-        {
-          "key": "Content-Encoding",
-          "value": "gzip"
-        },
         {
           "key": "Content-Type",
           "value": "application/wasm"
@@ -27,28 +19,38 @@
       ]
     },
     {
-      "source": "/Build/:name.gz",
+      "source": "/(.*\\.gz)",
       "headers": [
         {
           "key": "Content-Encoding",
           "value": "gzip"
-        },
-        {
-          "key": "Content-Type",
-          "value": "application/javascript"
         }
       ]
     },
     {
-      "source": "/Build/:name.js.gz",
+      "source": "/(.*\\.wasm\\.gz)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/wasm"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.br)",
       "headers": [
         {
           "key": "Content-Encoding",
-          "value": "gzip"
-        },
+          "value": "br"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.wasm\\.br)",
+      "headers": [
         {
           "key": "Content-Type",
-          "value": "application/javascript"
+          "value": "application/wasm"
         }
       ]
     }
