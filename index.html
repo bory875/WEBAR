@@ -4,14 +4,24 @@
     <meta charset="utf-8" />
     <title>webar</title>
 
-    <script async src="opencv.js" type="text/javascript" onload = "openCvReady()"></script>
-    <script type="module" crossorigin src="/assets/index-DGevZKCz.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CNfxwxvc.css">
+    <script
+      async
+      src="opencv.js"
+      type="text/javascript"
+      onload="startProcessing();"
+    ></script>
+    <script type="module" crossorigin src="/assets/index-C7JYaqOO.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-amW9s7eJ.css">
   </head>
   <body>
-    <video id="webcam" height="100px" style="display: none;"></video>
-    <canvas id="transferCanvas" style="display: none;"></canvas>
-    <canvas id="displayCanvas"></canvas>
+    <video id="webcam" height="100px" style="display: none"></video>
+    <canvas id="transferCanvas" style="display: none"></canvas>
+    <div id="displayContainer">
+      <canvas id="displayCanvas"></canvas>
+    </div>
+    <div id="inputs">
+      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    </div>
     <button id="switchCamButton">Switch Camera</button>
   </body>
 </html>
