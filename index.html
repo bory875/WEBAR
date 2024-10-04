@@ -20,41 +20,8 @@
 
     <div id="displayContainer">
       <canvas id="displayCanvas"></canvas>
+      <canvas id="displayCanvas2"></canvas>
     </div>
-    <div id="inputs">
-      <div class="input">
-        <div class="inputCheck">
-          <input type="checkbox" checked id="blurCheck" />
-          <div class="inputlabel">Blur</div>
-        </div>
-        <div class="inputRange">
-          <div class="inputlabel">Blur kernel</div>
-          <input
-            type="range"
-            min="1"
-            max="9"
-            value="3"
-            step="2"
-            id="blurRange"
-          />
-        </div>
-      </div>
-      <div class="input">
-        <div class="inputCheck">
-          <input type="checkbox" min="1" max="100" value="50" id="cannyCheck" />
-          <div class="inputlabel">Canny</div>
-        </div>
-        <div class="inputRange">
-          <div class="inputlabel">Canny Treshold 1</div>
-          <input type="range" min="1" max="100" value="50" step="1" id="cannyRange1" />
-        </div>
-        <div class="inputRange">
-          <div class="inputlabel">Canny Treshold 2</div>
-          <input type="range" min="1" max="100" value="50" step="1" id="cannyRange2" />
-        </div>
-      </div>
-
-      <button id="applyButton">Apply</button>
       <button id="switchCamButton">Switch Camera</button>
     </div>
   </body>
