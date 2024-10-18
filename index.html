@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebAR</title>
 
-    <script
-      async
-      src="opencv.js"
-      type="text/javascript"
-      onload="startAR();"
-    ></script>
-    <script type="module" crossorigin src="/assets/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index.css">
-  </head>
-  <body>
-    <video id="webcam" height="100px" style="display: none"></video>
-    <canvas id="transferCanvas" style="display: none"></canvas>
-    <canvas id="displayCanvas"></canvas>
-    <canvas id="displayCanvas2"></canvas>
-    <button id="switchCamButton">Switch Camera</button>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebAR</title>
+
+  <script async src="opencv.js" type="text/javascript" onload="startAR();"></script>
+  <script type="module" crossorigin src="/assets/index.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index.css">
+</head>
+
+<body>
+  <div id="matchcount">0</div>
+  <video id="webcam" height="100px" style="display: none"></video>
+  <canvas id="transferCanvas" style="display: none"></canvas>
+  <canvas id="displayCanvas"></canvas>
+  <img id="image" src="/assets/image.jpg" style="display: none">
+  <button id="switchCamButton">Switch Camera</button>
+</body>
+
 </html>
