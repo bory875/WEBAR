@@ -103,8 +103,7 @@
                 return;
             }
             await LoadWebcams();
-            setTimeout(()=>{StartAR}, 200);
-            //document.getElementById("startARButton").style.display = "block";
+            document.getElementById("startARButton").style.display = "block";
         }
         initialize();
         var container = document.querySelector("#unity-container");
