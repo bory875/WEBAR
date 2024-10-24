@@ -108,7 +108,14 @@ body {
     color: white;
     font-size: 18pt;
     font-family: 'Montserrat';
+    border: none;
     text-align: center;
     padding: 20px;
     border-radius: 35px;
+}
+
+#startARButton:hover {
+    background-color: white;
+    color: #47506d;
+    border: 2px solid #47506d;
 }
