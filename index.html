@@ -90,7 +90,6 @@
     <script>
         var initialize = async () => {
             var unityCanvas = document.querySelector("#unity-canvas");
-            unityCanvas.style.display = "none";
             var videoCanvas = document.querySelector("#video-canvas");
             window.arCamera = new ARCamera(unityCanvas, videoCanvas);
             window.iTracker = new ImageTracker(arCamera);
