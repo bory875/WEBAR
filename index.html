@@ -103,7 +103,7 @@
             }
 
             await LoadWebcams();
-            StartAR();
+            setTimeout(()=>{StartAR()}, 500);
             document.getElementById("startARButton").style.display = "block";
         }
 

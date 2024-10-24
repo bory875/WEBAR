@@ -2,6 +2,7 @@
     font-family: 'Montserrat';
     src: url(Montserrat.ttf);
 }
+
 body {
     padding: 0;
     margin: 0
@@ -101,8 +102,8 @@ body {
     display: none
 }
 
-#startARButton{
+#startARButton {
     background-color: #004f74;
-    color:white;
+    color: white;
     font-family: 'Montserrat';
 }
