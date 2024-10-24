@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport"
@@ -7,10 +8,12 @@
     <title>TastyAir AR</title>
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="icon" type="image/x-icon" href="TemplateData/favicon.ico">
+
     <style>
         html {
             height: -webkit-fill-available;
         }
+
         body {
             margin: 0;
             padding: 0;
@@ -19,6 +22,7 @@
             width: 100vw;
             overflow: hidden;
         }
+
         .ctaDiv {
             display: flex;
             flex-direction: column;
@@ -34,18 +38,9 @@
         }
     </style>
 </head>
+
 <body>
     <!--IMAGETARGETS-->
-		<imagetarget id='bear' src='targets/bear.png'></imagetarget>
-		<imagetarget id='bfly' src='targets/bfly.png'></imagetarget>
-		<imagetarget id='flower' src='targets/flower.png'></imagetarget>
-		<imagetarget id='lady' src='targets/lady.png'></imagetarget>
-		<imagetarget id='reel' src='targets/reel.png'></imagetarget>
-		<imagetarget id='rmn' src='targets/rmn.png'></imagetarget>
-		<imagetarget id='frame' src='targets/frame.png'></imagetarget>
-		<imagetarget id='frame' src='targets/frame.png'></imagetarget>
-		<imagetarget id='frame' src='targets/frame.png'></imagetarget>
-		<imagetarget id='marker' src='targets/marker.png'></imagetarget>
 
     <video id="webcam-video" muted autoplay playsinline style="width:1px;position:absolute"></video>
     <!-- <video id="webcam-video" muted autoplay playsinline style="width:100%; height:100%; object-fit:cover; position:absolute"></video> -->
@@ -107,11 +102,15 @@
                 ShowError("Failed to initialize the experience.");
                 return;
             }
+
             await LoadWebcams();
-            document.getElementById("startARButton").style.borderRadius = document.getElementById("startARButton").offsetHeight/2;
             document.getElementById("startARButton").style.display = "block";
+            console.log(document.getElementById("startARButton").offsetHeight);
+            document.getElementById("startARButton").style.borderRadius = document.getElementById("startARButton").offsetHeight/2;
         }
+
         initialize();
+
         var container = document.querySelector("#unity-container");
         var canvas = document.querySelector("#unity-canvas");
         var loadingBar = document.querySelector("#unity-loading-bar");
@@ -119,6 +118,7 @@
         function StartAR() {
             canvas.style.width = window.innerWidth + "px";
             canvas.style.height = window.innerHeight + "px";
+
             document.getElementById("startARDiv").style.display = "none";
             createUnityInstance(document.querySelector("#unity-canvas"), {
                 dataUrl: "Build/build.data",
@@ -138,18 +138,21 @@
                 ).then((unityInstance) => {
             window.unityInstance = unityInstance;
             RequestWebcam();
+
             loadingBar.style.display = "none";
         });
         loadingBar.style.display = "block";
             }
         //Set Facing Mode here ('environment', 'user', '')
 		window.unityFacingMode = "environment"
+
         window.WEBCAM_SETTINGS = {
             video: {
                 facingMode: unityFacingMode,
             },
             audio: false
         };
+
         window.requestingForPermissions = false;
         async function RequestWebcam() {
             window.requestingForPermissions = true;
@@ -165,20 +168,25 @@
                 window.requestingForPermissions = false;
             }
         }
+
         async function StartWebcam() {
             console.log("StartWebcam")
+
             while (window.requestingForPermissions) {
                 // Wait until requestingForPermissions becomes true.
                 console.log("Waiting for permissions...");
                 await new Promise(resolve => setTimeout(resolve, 100)); // Adjust the delay time as needed.
             }
+
             console.log("Got Permissions");
+
             if (window.webcamStream) {
                 const video = document.querySelector("#webcam-video");
                 video.srcObject = webcamStream;
                 try {
                     await arCamera.startWebcam(video);
                     console.log("Webcam started successfully");
+
                     window.unityInstance.SendMessage('ARCamera', 'OnStartWebcamSuccess');
                 }
                 catch (err) {
@@ -198,6 +206,7 @@
             var ctr = 0;
             devices.forEach(mediaDevice => {
                 if (mediaDevice.kind === 'videoinput') {
+
                     if (window.unityFacingMode == 'environment' && !mediaDevice.label.includes('facing front')) {
                         //back cam only
                         camDevices.push(mediaDevice);
@@ -210,6 +219,7 @@
                         //back and front
                         camDevices.push(mediaDevice);
                     }
+
                     ctr++;
                 }
             });
@@ -240,9 +250,11 @@
             //console.log(window.WEBCAM_SETTINGS);
             iTracker.WEBCAM_NAME = select.options[select.selectedIndex].innerHTML;
         }
+
         async function FlipCam() {
             arCamera.stopWebcam();
             window.WEBCAM_SETTINGS.video.deviceId = '';
+
             if (window.WEBCAM_SETTINGS.video.facingMode == 'user') {
                 window.WEBCAM_SETTINGS.video.facingMode = 'environment';
                 arCamera.setFlipped(false);
@@ -252,29 +264,38 @@
                 arCamera.setFlipped(true);
             }
             window.webcamStream = await navigator.mediaDevices.getUserMedia(window.WEBCAM_SETTINGS);
+
             const video = document.querySelector("#webcam-video");
             video.srcObject = webcamStream;
+
             await arCamera.startWebcam(video);
         }
+
         function ShowError(error) {
             document.getElementById("errorDiv").style.display = "flex";
             document.getElementById("errorText").innerHTML = error;
         }
+
         function ShowScreenshot(dataUrl) {
             document.getElementById("screenshotDiv").style.display = "flex";
             document.getElementById("screenshotImg").src = dataUrl;
             document.getElementById("screenshotImg").style.width = "80vw";
             document.getElementById("screenshotImg").style.height = 80 / window.innerWidth * window.innerHeight + "vw";
         }
+
         function ShowConfirmUrl(url) {
             document.getElementById("confirmUrlDiv").style.display = "flex";
             window.newUrlString = url;
             document.getElementById("confirmUrlText").innerText = "Are you sure you want to visit " + url;
         }
+
         window.ITRACKER_GLOBALS = {
             //place global settings here
             INTERNAL_SMOOTHFACTOR_POS: .075,
         }
+
+
     </script>
 </body>
+
 </html>
