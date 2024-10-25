@@ -99,7 +99,6 @@
             }
             await LoadWebcams();
             document.getElementById("startARButton").style.display = "block";
-            console.log(document.getElementById("startARButton").offsetHeight/2);
             document.getElementById("startARButton").style.borderRadius = document.getElementById("startARButton").offsetHeight / 2;
         }
         initialize();
@@ -131,7 +130,7 @@
             RequestWebcam();
             loadingBar.style.display = "none";
         });
-        loadingBar.style.display = "block";
+        loadingBar.style.display = "flex";
             }
         //Set Facing Mode here ('environment', 'user', '')
 		window.unityFacingMode = "environment"
