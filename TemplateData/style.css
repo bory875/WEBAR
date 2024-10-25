@@ -26,6 +26,13 @@ body {
     height: 100%;
 }
 
+#video-canvas{
+    border: 20px solid var(--background-color);
+    border-radius: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
 #unity-container.unity-desktop {
     left: 50%;
     top: 50%;
