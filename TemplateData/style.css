@@ -51,6 +51,7 @@ body {
 #video-canvas{
     border-radius: 30px;
     border: 10px solid var(--background-color);
+    box-sizing: border-box;
 }
 
 #unity-container.unity-desktop {
