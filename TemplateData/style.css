@@ -18,7 +18,7 @@ body {
 
 #unity-container {
     position: absolute;
-    border: 20px solid var(--background-color);
+    border-bottom: 50px solidvar(--background-color);
     border-radius: 30px;
     box-sizing: border-box;
     overflow: hidden;
@@ -27,7 +27,7 @@ body {
 }
 
 #video-canvas{
-    border: 20px solid var(--background-color);
+    border: 10px solid var(--background-color);
     border-radius: 30px;
     box-sizing: border-box;
     overflow: hidden;
