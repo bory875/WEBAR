@@ -43,6 +43,7 @@ body {
 
 #topBar {
     margin-top: 20px;
+    border-radius: 10px;
     padding: 10px;
     font-size: 13pt;
     background-color: var(--tasty-color);
@@ -51,11 +52,17 @@ body {
 }
 
 #bottomBar {
+    width: 100%;
     padding: 10px;
     font-size: 13pt;
     background-color: white;
     color:white;
     font-family: 'Montserrat';
+    height: 80px;
+}
+
+#logoImg{
+    object-fit: contain;
 }
 
 #unity-container.unity-desktop {
