@@ -128,9 +128,9 @@
                 ).then((unityInstance) => {
             window.unityInstance = unityInstance;
             RequestWebcam();
-            loadingBar.style.display = "none";
+            loadingBar.style.visibility = "hidden";
         });
-        loadingBar.style.display = "flex";
+        loadingBar.style.visibility = "visible";
             }
         //Set Facing Mode here ('environment', 'user', '')
 		window.unityFacingMode = "environment"
