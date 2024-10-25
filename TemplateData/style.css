@@ -37,7 +37,9 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #unity-logo {
@@ -110,4 +112,5 @@ body {
     background-color: white;
     color: #47506d;
     border: 2px solid #47506d;
+    border-radius: 0px;
 }
