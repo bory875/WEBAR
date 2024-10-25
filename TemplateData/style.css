@@ -104,12 +104,9 @@ body {
     color: white;
     font-size: 18pt;
     font-family: 'Montserrat';
-    border-collapse: separate; 
     border: 0px solid #47506d;
     text-align: center;
     padding: 20px;
-    overflow: hidden;
-    perspective: 1px;
 }
 
 #startARButton:hover {
