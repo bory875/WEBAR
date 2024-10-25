@@ -18,7 +18,6 @@ body {
 
 #unity-container {
     position: absolute;
-    border: 10px solid var(--background-color);
     border-radius: 30px;
     box-sizing: border-box;
     overflow: hidden;
