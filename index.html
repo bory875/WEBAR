@@ -76,8 +76,9 @@
                 return;
             }
             await LoadWebcams();
-            document.getElementById("startARButton").style.display = "block";
-            document.getElementById("startARButton").style.borderRadius = document.getElementById("startARButton").offsetHeight / 2 + "px";
+            //document.getElementById("startARButton").style.display = "block";
+            StartAR();
+            //document.getElementById("startARButton").style.borderRadius = document.getElementById("startARButton").offsetHeight / 2 + "px";
         }
         initialize();
         var container = document.querySelector("#unity-container");
