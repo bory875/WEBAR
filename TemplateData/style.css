@@ -52,6 +52,8 @@ body {
 }
 
 #bottomBar {
+    display: flex;
+    flex-direction: row;
     width: 100%;
     padding: 10px;
     font-size: 13pt;
@@ -62,7 +64,7 @@ body {
 }
 
 #logoImg{
-    max-width: 100%;
+    height: 50px;
     object-fit: contain;
 }
 
