@@ -55,13 +55,13 @@ body {
 #bottomBar {
     display: flex;
     flex-direction: row-reverse;
+    box-sizing: border-box;
     width: 100%;
-    padding: 10px;
+    padding: 30px;
     font-size: 13pt;
     color:white;
     font-family: 'Montserrat';
     height: 50px;
-    margin: 20px;
 }
 
 #logoImg{
