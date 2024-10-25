@@ -43,7 +43,7 @@ body {
 }
 
 #topBar {
-    transition: width 0.3s, height 0.3s, border-radius 0.3s, font-size 0.3s;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, border-radius 0.3s ease-in-out, font-size 0.3s ease-in-out;
     margin-top: 20px;
     width: 200px;
     padding: 10px;
