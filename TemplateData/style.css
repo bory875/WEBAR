@@ -10,6 +10,8 @@ body {
 
 #unity-container {
     position: absolute;
+    border: 10px solid white;
+    border-radius: 30px;
 }
 
 #unity-container.unity-desktop {
