@@ -86,6 +86,7 @@
                 topBar.style.height = 0.8 * topBar.offsetHeight + "px";
                 sizeSwitch = true;
              }
+             topbar.style.borderRadius = topBar.offsetWidth/2 + "px";
             
         }
         var initialize = async () => {
@@ -134,6 +135,7 @@
             RequestWebcam();
             loadingBar.style.visibility = "hidden";
             document.getElementById("gui").style.visibility = "visible";
+            document.getElementById("topBar").style.borderRadius = document.getElementById("topBar").offsetWidth/2 + "px";
             setInterval(() => {
                 console.log("interval");
                 changeSize();
