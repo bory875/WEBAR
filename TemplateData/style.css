@@ -43,7 +43,7 @@ body {
 }
 
 #topBar {
-    transition: width 0.3s, height 0.3s, border-radius 0.3s;
+    transition: width 0.3s, height 0.3s, border-radius 0.3s, font-size 0.3s;
     margin-top: 20px;
     padding: 10px;
     box-sizing: border-box;
@@ -51,6 +51,9 @@ body {
     background-color: var(--tasty-color);
     color:white;
     font-family: 'Montserrat';
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #bottomBar {
