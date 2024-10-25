@@ -3,15 +3,24 @@
     src: url(Montserrat.ttf);
 }
 
+@property --background-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: white;
+  }
+  
+
 body {
     padding: 0;
     margin: 0;
+    background-color: var(--background-color);
 }
 
 #unity-container {
     position: absolute;
-    border: 10px solid white;
+    border: 20px solid var(--background-color);
     border-radius: 30px;
+    box-sizing: border-box;
 }
 
 #unity-container.unity-desktop {
@@ -63,8 +72,8 @@ body {
 
 #unity-progress-bar-full {
     position: relative;
-    top:-18px;
-    left:0;
+    top: -18px;
+    left: 0;
     width: 0%;
     height: 18px;
     z-index: 0;
@@ -99,20 +108,4 @@ body {
     width: 38px;
     height: 38px;
     background: url('fullscreen-button.png') no-repeat center
-}
-
-#startARButton {
-    background-color: #004f74;
-    color: white;
-    font-size: 18pt;
-    font-family: 'Montserrat';
-    border: 0px solid #47506d;
-    text-align: center;
-    padding: 20px;
-}
-
-#startARButton:hover {
-    background-color: white;
-    color: #47506d;
-    border: 2px solid #47506d;
 }
