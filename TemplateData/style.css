@@ -39,6 +39,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    visibility: hidden;
 }
 
 #topBar {
@@ -53,14 +54,14 @@ body {
 
 #bottomBar {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     width: 100%;
     padding: 10px;
     font-size: 13pt;
-    background-color: white;
     color:white;
     font-family: 'Montserrat';
-    height: 80px;
+    height: 50px;
+    margin: 20px;
 }
 
 #logoImg{
