@@ -53,6 +53,7 @@ body {
     height: 18px;
     margin-top: 10px;
     margin-left: 6.5px;
+    z-index: 99;
     background: url('progress-bar-empty-light.png') no-repeat center
 }
 
