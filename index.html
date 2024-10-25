@@ -72,16 +72,18 @@
     <script>
         let sizeSwitch = true;
         function changeSize(){
+            let topBar = document.getElementById("topBar");
+            console.log("menim")
             if(sizeSwitch)
              {
-                document.getElementById("topBar").width *= 1.25;
-                document.getElementById("topBar").height *= 1.25;
+                topBar.style.width = 1.25* topBar.offsetWidth + "px";
+                topBar.style.height = 1.25 * topBar.offsetHeight + "px";
                 sizeSwitch = false;
              }
              else
              {
-                document.getElementById("topBar").width *= 0.8;
-                document.getElementById("topBar").height *= 0.8;
+                topBar.style.width = 0.8* topBar.offsetWidth + "px";
+                topBar.style.height = 0.8 * topBar.offsetHeight + "px";
                 sizeSwitch = true;
              }
             
@@ -133,6 +135,7 @@
             loadingBar.style.visibility = "hidden";
             document.getElementById("gui").style.visibility = "visible";
             setInterval(() => {
+                console.log("interval");
                 changeSize();
             }, 1000);
         });
