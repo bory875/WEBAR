@@ -45,10 +45,10 @@ body {
 #topBar {
     transition: width 0.3s, height 0.3s, border-radius 0.3s, font-size 0.3s;
     margin-top: 20px;
-    width: 100px;
+    width: 200px;
     padding: 10px;
     box-sizing: border-box;
-    font-size: 13pt;
+    font-size: 11pt;
     background-color: var(--tasty-color);
     color:white;
     font-family: 'Montserrat';
