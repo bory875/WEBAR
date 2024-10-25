@@ -60,6 +60,7 @@ body {
 #unity-progress-bar-full {
     width: 0%;
     height: 18px;
+    z-index: 0;
     margin-top: 10px;
     background: url('progress-bar-full-light.png') no-repeat center
 }
