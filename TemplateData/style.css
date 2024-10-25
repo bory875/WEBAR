@@ -107,11 +107,12 @@ body {
     border: none;
     text-align: center;
     padding: 20px;
+    overflow: hidden;
+    perspective: 1px;
 }
 
 #startARButton:hover {
     background-color: white;
     color: #47506d;
     border: 2px solid #47506d;
-    border-radius: 0px;
 }
